@@ -19,8 +19,23 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
+		Map<String,Integer> x = new HashMap<>();
+		do {
+			System.out.println("Enter name");
+			String n = in.next();
+			System.out.println("Enter height");
+			int h = in.nextInt();
+			x.put(n, h);
+			System.out.println("continue? (Y/N)");
+		}while (in.next().equals("Y"));
+		
+		do {
+			System.out.println("Which student");
+			System.out.println(x.get(in.next()) + " is the students hieght");
+			System.out.println("continue? (Y/N)");
+		}while (in.next().equals("Y/N"));
+	
+		
 		throw new NotYetImplementedException();
 
 	}
